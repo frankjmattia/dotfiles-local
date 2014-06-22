@@ -1,6 +1,8 @@
-dotzsh: My zsh configuration.
+# frankjmattia/dotfiles-local
 
-Installation:
+My dotfiles, used in conjunction with https://github.com/thoughtbot/rcm
+
+## Installation:
 
     git clone git://github.com/frankjmattia/dotfiles-local
 
