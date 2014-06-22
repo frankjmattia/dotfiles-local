@@ -1,0 +1,31 @@
+syntax enable
+set background=dark
+colorscheme solarized
+
+set encoding=utf-8
+set exrc
+set mouse+=a
+set noautoread
+set nowrap
+set secure
+set softtabstop=2
+set shiftwidth=2
+set tabstop=2
+set tags+=gems.tags
+set ttymouse=xterm2
+set whichwrap+=b,<,>,[,]
+
+" Block indent/outdent
+vnoremap << <gv
+vnoremap >> >gv
+
+" Switch between splits using Ctrl+Arrow
+nnoremap <C-Down> <C-W><C-J>
+nnoremap <C-Up> <C-W><C-K>
+nnoremap <C-Left> <C-W><C-H>
+nnoremap <C-Right> <C-W><C-L>
+
+nnoremap <Left> h
+nnoremap <Up> k
+nnoremap <Down> j
+nnoremap <Right> l
