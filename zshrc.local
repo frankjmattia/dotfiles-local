@@ -1,3 +1,5 @@
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+
 alias ls="ls -alGh"
 alias ez="vim ~/.zshrc"
 alias sz="source ~/.zshrc"

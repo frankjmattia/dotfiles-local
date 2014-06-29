@@ -13,7 +13,7 @@ set shiftwidth=2
 set tabstop=2
 set tags+=gems.tags
 set ttymouse=xterm2
-set whichwrap+=b,<,>,[,]
+set whichwrap+=<,>,h,l,[,]
 
 " Block indent/outdent
 vnoremap << <gv
