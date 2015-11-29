@@ -1,3 +1,4 @@
 Plug 'Lokaltog/vim-powerline'
 Plug 'stephenmckinney/vim-solarized-powerline'
 Plug 'altercation/vim-colors-solarized'
+Plug 'rust-lang/rust.vim'

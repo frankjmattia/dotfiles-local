@@ -1,9 +1,4 @@
-export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
-
 alias ls="ls -alGh"
-alias ez="vim ~/.zshrc"
-alias sz="source ~/.zshrc"
-alias devlog="tail -f log/development.log | grep -v '^$'"
 
 fpath=($fpath ~/.zsh/prompt)
 typeset -U fpath
