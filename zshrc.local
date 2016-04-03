@@ -1,5 +1,7 @@
 alias ls="ls -alGh"
 
+export PATH=/Users/frankjmattia/SDK/platform-tools:$PATH
+
 fpath=($fpath ~/.zsh/prompt)
 typeset -U fpath
 
