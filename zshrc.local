@@ -1,5 +1,7 @@
 alias ls="ls -alGh"
 
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
 export PATH=/Users/frankjmattia/SDK/platform-tools:$PATH
 
 fpath=($fpath ~/.zsh/prompt)
