@@ -1,6 +1,13 @@
 set-option -g mouse on
 set-option -g status-position top
 
+# send the prefix to client inside window
+unbind C-s
+set-option -g prefix C-s
+
+unbind C-b
+bind-key -n C-b send-prefix
+
 # https://github.com/tmux/tmux/issues/145
 #bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft='#{pane_in_mode}' 'send-keys -M' 'select-pane -t=; copy-mode -e; send-keys -M'"
 #bind -n WheelDownPane select-pane -t= \; send-keys -M
