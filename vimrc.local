@@ -2,16 +2,6 @@ syntax enable
 set background=dark
 colorscheme solarized
 
-" For some reason, ag doesn't like some directories and will randomly report
-" No matches found. Find seems to fix the issue but isn't as nice as ag.
-" let g:ctrlp_user_command = 'find %s -type f'
-
-" This is the standard command.
-" let g:ctrlp_user_commant = 'ag -Q -l -u --hidden --nocolor -g "" %s'
-
-" Enable caching to cut down on refreshes when ag reports `No matches found.`
-let g:ctrlp_use_caching = 1
-
 set encoding=utf-8
 set exrc
 set mouse+=a

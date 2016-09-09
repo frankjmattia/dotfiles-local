@@ -3,6 +3,8 @@ alias ls="ls -alGh"
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 export PATH=/Users/frankjmattia/SDK/platform-tools:$PATH
+export GOPATH=$HOME/src
+export PATH=$PATH:$GOPATH/bin
 
 fpath=($fpath ~/.zsh/prompt)
 typeset -U fpath
