@@ -2,6 +2,11 @@ syntax enable
 set background=dark
 colorscheme solarized
 
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+
+let g:ruby_indent_assignment_style = 'variable'
+
 set encoding=utf-8
 set exrc
 set mouse+=a
