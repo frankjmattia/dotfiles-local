@@ -2,6 +2,8 @@ alias ls="ls -alGh"
 
 export GOPATH=$HOME/src
 export PATH=$PATH:$GOPATH/bin
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+export RUBYOPT="-W:no-deprecated -W:no-experimental"
 
 fpath=($fpath ~/.zsh/prompt)
 typeset -U fpath
@@ -12,8 +14,9 @@ autoload -Uz promptinit
 promptinit
 prompt wunjo
 
-# added by travis gem
-[ -f /Users/frankjmattia/.travis/travis.sh ] && source /Users/frankjmattia/.travis/travis.sh
+# Autocomplete GCloud
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 
 # Less Colors for Man Pages
 export LESS="-R"
