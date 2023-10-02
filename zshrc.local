@@ -1,24 +1,25 @@
-alias ls="ls -alGh"
+. "$HOME/.asdf/asdf.sh"
 
 export GOPATH=$HOME/src
 export HELM_EXPERIMENTAL_OCI=1
-export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/bin
-export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@3)"
 export RUBYOPT="-W:no-deprecated -W:no-experimental"
 
-fpath=($fpath ~/.zsh/prompt)
 typeset -U fpath
 
-setopt promptsubst
-autoload -Uz promptinit
+fpath=($fpath ~/.zsh/prompt)
+fpath=(${ASDF_DIR}/completions $fpath)
+autoload -Uz compinit && compinit
 
-promptinit
+setopt promptsubst
+autoload -Uz promptinit && promptinit
 prompt wunjo
 
 # Autocomplete GCloud
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
 # Less Colors for Man Pages
 export LESS="-R"
